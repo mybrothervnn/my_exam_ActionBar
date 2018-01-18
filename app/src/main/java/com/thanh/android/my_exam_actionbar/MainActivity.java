@@ -16,10 +16,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        todo 2: init object toolbar
+//        todo toolbar 2: init object toolbar (from activity_main.xml)
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 
-//        todo 3: set for Actionbar of AppCompatActivity
+//        todo toolbar 3: set for Actionbar of AppCompatActivity
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-//    todo 4: override method when Create menu
+//    todo toolbar 4: override method when Create menu
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-//    todo 6: override method for event onOptionsItemSelected
+//    todo toolbar 6_END: override method for event onOptionsItemSelected
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
