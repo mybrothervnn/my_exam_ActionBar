@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,7 +16,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+//        todo toolbar 2: init object toolbar (from activity_main.xml)
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+
+//        todo toolbar 3: set for Actionbar of AppCompatActivity
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -28,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+//    todo toolbar 4: override method when Create menu
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -35,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+//    todo toolbar 6_END: override method for event onOptionsItemSelected
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -46,6 +52,27 @@ public class MainActivity extends AppCompatActivity {
         if (id == R.id.action_settings) {
             return true;
         }
+        if (id == R.id.action_test1) {
+            Toast.makeText(this, "action_test1", Toast.LENGTH_SHORT).show();
+            return true;
+        }
+        if (id == R.id.action_test2) {
+            Toast.makeText(this, "action_test2", Toast.LENGTH_SHORT).show();
+            return true;
+        }
+        if (id == R.id.action_test3) {
+            return true;
+        }
+        if (id == R.id.action_test4) {
+            return true;
+        }
+        if (id == R.id.action_test5) {
+            return true;
+        }
+        if (id == R.id.action_test6) {
+            return true;
+        }
+
 
         return super.onOptionsItemSelected(item);
     }
